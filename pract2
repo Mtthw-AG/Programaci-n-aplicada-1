@@ -1,0 +1,136 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Mtthw-AG/Programaci-n-aplicada-1/blob/main/pract2\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"CALCULADORA BÁSICA\")\n",
+        "print(\"1. Suma\")\n",
+        "print(\"2. Resta\")\n",
+        "print(\"3. Multiplicación\")\n",
+        "print(\"4. División\")\n",
+        "\n",
+        "opcion = int(input(\"Elige una opción (1-4): \"))\n",
+        "\n",
+        "num1 = int(input(\"Ingresa el primer número: \"))\n",
+        "num2 = int(input(\"Ingresa el segundo número: \"))\n",
+        "\n",
+        "if opcion == 1:\n",
+        "    print(\"Resultado:\", num1 + num2)\n",
+        "elif opcion == 2:\n",
+        "    print(\"Resultado:\", num1 - num2)\n",
+        "elif opcion == 3:\n",
+        "    print(\"Resultado:\", num1 * num2)\n",
+        "elif opcion == 4:\n",
+        "    if num2 != 0:\n",
+        "        print(\"Resultado:\", num1 / num2)\n",
+        "    else:\n",
+        "        print(\"Error: no se puede dividir entre cero\")\n",
+        "else:\n",
+        "    print(\"Opción inválida\")"
+      ],
+      "metadata": {
+        "id": "I5qQNFZBkZBH",
+        "outputId": "01192901-c95a-4f8f-b176-5a45e59ba120",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "CALCULADORA BÁSICA\n",
+            "1. Suma\n",
+            "2. Resta\n",
+            "3. Multiplicación\n",
+            "4. División\n",
+            "Elige una opción (1-4): 4\n",
+            "Ingresa el primer número: 3\n",
+            "Ingresa el segundo número: 2\n",
+            "Resultado: 1.5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"CALCULADORA BÁSICA\")\n",
+        "print(\"1. Suma\")\n",
+        "print(\"2. Resta\")\n",
+        "print(\"3. Multiplicación\")\n",
+        "print(\"4. División\")\n",
+        "\n",
+        "opcion = int(input(\"Elige una opción (1-4): \"))\n",
+        "\n",
+        "num1 = int(input(\"Ingresa el primer número entero: \"))\n",
+        "num2 = int(input(\"Ingresa el segundo número entero: \"))\n",
+        "\n",
+        "if opcion == 1:\n",
+        "    print(\"Resultado:\", num1 + num2)\n",
+        "elif opcion == 2:\n",
+        "    print(\"Resultado:\", num1 - num2)\n",
+        "elif opcion == 3:\n",
+        "    print(\"Resultado:\", num1 * num2)\n",
+        "elif opcion == 4:\n",
+        "    if num2 != 0:\n",
+        "        print(\"Resultado:\", int(num1 / num2))\n",
+        "    else:\n",
+        "        print(\"Error: no se puede dividir entre cero\")\n",
+        "else:\n",
+        "    print(\"Opción inválida\")"
+      ],
+      "metadata": {
+        "id": "0K7y-Nwv8e3N",
+        "outputId": "43b9b1b6-844f-4685-c1af-282196025898",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "CALCULADORA BÁSICA\n",
+            "1. Suma\n",
+            "2. Resta\n",
+            "3. Multiplicación\n",
+            "4. División\n",
+            "Elige una opción (1-4): 4\n",
+            "Ingresa el primer número entero: 6\n",
+            "Ingresa el segundo número entero: 4\n",
+            "Resultado: 1\n"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "Te damos la bienvenida a Colaboratory",
+      "toc_visible": true,
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
