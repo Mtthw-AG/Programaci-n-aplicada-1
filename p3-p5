@@ -1,0 +1,179 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Mtthw-AG/Programaci-n-aplicada-1/blob/main/p3-p5\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# @title\n",
+        "calificación=int(input(\"ingrese su calificación\"))\n",
+        "\n",
+        "ascii_art = r\"\"\"\n",
+        "                              ██████████████▒\n",
+        "                             ███         ░▒▓███████      ▒██████\n",
+        "                              ░██▒  ░▒▒▒▒▒▒▒░       ▒██  ░██   ▒██████\n",
+        "                                 ██▓  ▒▒▒▒▒░ ▓██████████████    ░░░░░▒▓████\n",
+        "                                   ██▒ ░▒▒▒░░██        ░▒██████▓░   ░░ █████████▒\n",
+        "                                     ██░ ░▒░ █  ▒▒▒▒░▒░░       ▒███▓   █▒      ░▒████\n",
+        "                                      ░██ ░▒   ▒▒▒▒▒▒▒▒▒▒▒░         ███    ░▒▒░ ░███████\n",
+        "                                        ██▓ ░▒▒▒▒▒▒▒▒▒▒░   ███████████████▒    ███    █████\n",
+        "                                          █▓░░▒▒▒▒▒▒▒▒▒░▒███▒      ░▒▒░   ▒██░██░  ███░     ▒█\n",
+        "                                           █ ░░▒▒▒▒▒▒▒▒▒██    █████▒░ ░ ▓██████  ██▓     ▒██\n",
+        "                                           ██░░▒▒▒▒▒▒▒░    ████             ███░█▓       █████░\n",
+        "                                          ███░▒▒▒▒▒▒▒▒░█████▓                 ██▓        ███████\n",
+        "                                        ██▒   ░▒▒▒▒▒▒▒░▓█            ▒████     ░█░       ████▓ ▒█\n",
+        "                                     ███░░░▒▒▒▒▒▒▒▒▒▒▒░░▒██          ███████    ██       ████   ██\n",
+        "                                   ███░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒░░░██        ████████     ██       ████████   ▓\n",
+        "                                ███▒ ░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░  █▓       ███▒  ██     ██        ████░    ██░\n",
+        "                            ▓███▒  ░▒░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█ █░      ████  ░██     ██              ████▓\n",
+        "                         ███▓░ ░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▓█ █▓      ████████      ████▓    ░█████▓  ▓█░\n",
+        "                      ███▒░░▒▒▒▒░   ░▒▒▒▒▒▒▒▒▒▒▒▒░░░▒▒▒░▓█ ░█      ██████      ▒█▓   ▒████▓▒▒████████\n",
+        "                   ███▒ ░▒▒▒▒▒▒░▒███▓░   ▒▒▒▒▒▒▒▒░▒░░▒▒░░█▓ ███              ███████  ▒▓▓▓▒░   ▒███░██\n",
+        "                 ██▓▒░░▒▒▒▒▒░   ░███████▒ ░▒▒▒▒▒░▒██  ░▒ ▓█▓  ▓████▓  ▒▒██████░   ░███▓   ░████▒     ██\n",
+        "               ██▓░░▒▒▒▒▒▒▒░ ▒██▓░░░░░ ▓█░ ░▒▒▒▒▒ ░███     ▓██▓     ░▒░▓███▒░ ░░░░   ██████▒    ░░▒░ ██\n",
+        "             ▓██░░▒▒▒▒▒▒▒▒░ ▒█▒  ░░░░▒▒░▒██  ░▒▒▒▒░  ██████▒░░▒█████████▒  ░░▒▒░▒▒▒▒░  ██   ░░░▒░░ ▒██\n",
+        "            ▓█▒░░▒▒▒▒▒▒▒▒▒░▒█░░░█████░░▒░░███   ░▒▒▒░    ░▓▓███▓▒       ░▒▒▒▒▒▒▒▒▒▒▒▒░  ░░░▒░░  ░▒███\n",
+        "            ██ ▒▒▒▒▒▒▒▒▒▒▒░░█ ▒▒█▒▒▒▓█▒░░░ ░████    ░▒░░░░░       ░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░    ▒█████▒\n",
+        "            █▓░▒▒▒▒▒▒▒▒▒▒▒░▒█ ▒▒█▓▓▒▒▒▓██░    ░████▓░    ░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░      ▒████▓ ▒█▓\n",
+        "            █▓░▒▒▒▒▒▒▒▒▒▒▒░░█ ▒▒░█▓▒▒▓▒▒▓███▒░    ░▓██████▒░                   ░▒▓██████▒ ░▓████▓\n",
+        "            ██░░▒▒▒▒▒▒▒▒▒▒▒░▓█░▒░░██▒░░▒▒░░▒▓███▓▒░     ░▒▓█████████████████████▒░▒▓██████▒░ ░▒█\n",
+        "             ██░░▒▒▒▒▒▒▒▒▒▒░ ██░░░░░█████████▓▒▒▓██████▓▓▒▒░░            ░█████████▓░  ▒███▒▓██\n",
+        "              ██░░▒▒▒▒▒▒▒▒▒▒▒░██▒░░░  █▓     ████▓░░▒▒▒▓▓▓▓███████████████                ███\n",
+        "               ██░░▒▒▒▒▒▒▒▒▒░░ ░██▒ ░░░░███░     ████▒░░▒▒▓▒▒▓▓▒▒▒▒▒▒░  ███  ░░░       ███\n",
+        "                ██▒ ░▒▒▒▒▒▒▒▒▒▒░ ░██▓  ░░ ░▓████     ███▒        ░▒█████          █████▒\n",
+        "                  ██░ ░▒▒▒▒▒▒▒▒▒░░  ▓███░      ▒███████████████████      ▒██████████▒\n",
+        "                    ██▒  ░▒▒▒▒▒▒▒▒▒░   ▒████▒░                     ▓████████████▓\n",
+        "                      ███▒  ░▒▒▒▒▒▒▒▒▒░    ░▓██████▓▒▒▒▒▒▒▓████████▓▒▒▒▓████\n",
+        "                         ████▒  ░░░░▒▒▒▒▒▒░░      ▒▓█████▓▒░     ▒▓████░\n",
+        "                            ▒███████████▓████▓█▓▓▓▓▓▓▓▓▓▓███████▒\n",
+        "                                   ░▒▒▒▒▒▒▒░▒▒▒▒▒▒░░░░\n",
+        "\"\"\"\n",
+        "\n",
+        "if (calificación>=70):\n",
+        "    print (\"poggers, aprobaste\")\n",
+        "elif (calificación >= 50 and calificación < 70): # Grades 50-69 for second chance\n",
+        "    print(\"aprobó para segunda oportunidad\")\n",
+        "    print (ascii_art)\n",
+        "else: # Covers grades less than 50\n",
+        "    print(\"reprobaste\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KiTv6NTqVG5t",
+        "outputId": "b692948a-b37c-49e9-f956-ec7518b975b2"
+      },
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "ingrese su calificación70\n",
+            "poggers, aprobaste\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Sección nueva"
+      ],
+      "metadata": {
+        "id": "KGTEbuZYey7_"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "edad=int(input(\"Ingrese su edad\"))\n",
+        "if (edad<=11):\n",
+        "  print(\"eres un niño o niña\")\n",
+        "elif (edad>=12 and edad<=17):\n",
+        "    print(\"eres un adolescente\")\n",
+        "elif (edad>=18 and edad<=64):\n",
+        "    print(\"eres un adulto\")\n",
+        "else:\n",
+        "    print(\"eres un adulto mayor\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 356
+        },
+        "id": "IoidZbrse0Dc",
+        "outputId": "6e09553b-e84d-4ecb-dbe9-7cbc6e8c5e2f"
+      },
+      "execution_count": 29,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "KeyboardInterrupt",
+          "evalue": "Interrupted by user",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m                         Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipython-input-3527523126.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0medad\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0minput\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Ingrese su edad\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      2\u001b[0m \u001b[0;32mif\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0medad\u001b[0m\u001b[0;34m<=\u001b[0m\u001b[0;36m11\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      3\u001b[0m   \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"eres un niño o niña\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[0;32melif\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0medad\u001b[0m\u001b[0;34m>=\u001b[0m\u001b[0;36m12\u001b[0m \u001b[0;32mand\u001b[0m \u001b[0medad\u001b[0m\u001b[0;34m<=\u001b[0m\u001b[0;36m17\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      5\u001b[0m     \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"eres un adolescente\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.12/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36mraw_input\u001b[0;34m(self, prompt)\u001b[0m\n\u001b[1;32m   1175\u001b[0m                 \u001b[0;34m\"raw_input was called, but this frontend does not support input requests.\"\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1176\u001b[0m             )\n\u001b[0;32m-> 1177\u001b[0;31m         return self._input_request(\n\u001b[0m\u001b[1;32m   1178\u001b[0m             \u001b[0mstr\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mprompt\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1179\u001b[0m             \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_parent_ident\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m\"shell\"\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.12/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36m_input_request\u001b[0;34m(self, prompt, ident, parent, password)\u001b[0m\n\u001b[1;32m   1217\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mKeyboardInterrupt\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1218\u001b[0m                 \u001b[0;31m# re-raise KeyboardInterrupt, to truncate traceback\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 1219\u001b[0;31m                 \u001b[0;32mraise\u001b[0m \u001b[0mKeyboardInterrupt\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Interrupted by user\"\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;32mfrom\u001b[0m \u001b[0;32mNone\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   1220\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mException\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1221\u001b[0m                 \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mlog\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mwarning\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Invalid Message:\"\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mexc_info\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;32mTrue\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m: Interrupted by user"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "semaforo=input(\"¿Qué color tiene el semáforo?\")\n",
+        "if semaforo == \"verde\":\n",
+        "    print(\"usted puede avanzar\")\n",
+        "elif semaforo == \"amarillo\":\n",
+        "    print(\"usted debe esperar\")\n",
+        "else:\n",
+        "    print(\"usted debe frenar\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Yz35DdqBhUb8",
+        "outputId": "7c7a386e-5068-4f2d-d4d0-9010934c4c39"
+      },
+      "execution_count": 33,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "¿Qué color tiene el semáforo?rojo\n",
+            "usted debe frenar\n"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "Te damos la bienvenida a Colab",
+      "toc_visible": true,
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
